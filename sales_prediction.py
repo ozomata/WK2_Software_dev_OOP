@@ -1,7 +1,7 @@
 class Sales:
  
     def __init__(self, amt, year):
-        self.year =year
+        self.year =int(year)
         self.amt=amt
         
     def profit(self, amt, year):
@@ -12,8 +12,4 @@ user_year= input("input the  year of  sales: ")
 
 userSales = Sales (user_amt, user_year)
 
-
-
-
-
-print("The profit for year", userSales.year  " : " , userSales.profit(user_amt, user_year))
+print("The profit for year", userSales.year , " : " ,   userSales.profit(user_amt, userSales))
