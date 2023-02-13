@@ -5,7 +5,7 @@ class Sales:
         self.amt=amt
         
     def profit(self, amt, year):
-        return (amt+(amt*(year-1)*0.05)*0.23)
+        return float((amt+(amt*(self.year-1)*0.05)*0.23))
     
 user_amt= float(input("input the sales: "))
 user_year= input("input the  year of  sales: ")
