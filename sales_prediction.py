@@ -4,12 +4,14 @@ class Sales:
         self.year =int(year)
         self.amt=amt
         
-    def profit(self, amt, year):
-        return float((amt+(amt*(self.year-1)*0.05)*0.23))
+    def profit(self):
+        yearSales=self.amt+(self.amt*(self.year-1)*0.05)
+        return float (yearSales+yearSales*0.23)
     
 user_amt= float(input("input the sales: "))
 user_year= input("input the  year of  sales: ")
 
 userSales = Sales (user_amt, user_year)
 
-print("The profit for year", userSales.year , " : " ,   userSales.profit(user_amt, userSales))
+print("The profit for year", userSales.year , " : " ,   userSales.profit())
+
